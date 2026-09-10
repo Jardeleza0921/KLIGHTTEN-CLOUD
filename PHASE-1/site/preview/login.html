@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" data-theme="dark-mint">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Static login demonstration for the Klightten Cloud Phase 1 web-app preview."><meta name="theme-color" content="#0b251e">
+    <title>Login Preview — Klightten Cloud</title><link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="app.css"><script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="preview-header"><div class="preview-header-inner">
+      <a class="preview-brand" href="index.html"><img class="preview-logo" src="../assets/klightten-cloud-logo.svg" alt=""><span class="preview-brand-copy"><strong>Klightten Cloud</strong><small>Static web-app preview</small></span></a>
+      <div class="preview-header-actions"><a class="back-link" href="index.html">Preview home</a><div class="preview-palettes" aria-label="Choose a color theme"><button class="preview-palette is-active" type="button" data-theme-choice="dark-mint" aria-label="Dark Mint theme" aria-pressed="true"></button><button class="preview-palette" type="button" data-theme-choice="neon-arcade" aria-label="Neon Arcade theme" aria-pressed="false"></button><button class="preview-palette" type="button" data-theme-choice="black-white" aria-label="Black and White theme" aria-pressed="false"></button><button class="preview-palette" type="button" data-theme-choice="crimson-red" aria-label="Crimson Red theme" aria-pressed="false"></button><button class="preview-palette" type="button" data-theme-choice="cream-coffee" aria-label="Cream Coffee theme" aria-pressed="false"></button></div></div>
+    </div></header>
+    <p class="preview-notice"><strong>Presentation mode:</strong> credentials below are demonstrations only and cannot access the live service.</p>
+    <main class="auth-layout">
+      <section class="auth-intro">
+        <p class="preview-kicker">Login preview</p><h1>A clear entry point for every role.</h1><p>The same login surface demonstrates how a client or administrator reaches the appropriate interface.</p>
+        <div class="auth-character" aria-label="Active Klightten theme mascot"><img class="preview-mascot" data-mascot-theme="dark-mint" src="../assets/mascots/bunny-dark-mint.webp" alt="Dark Mint bunny mascot"><img class="preview-mascot" data-mascot-theme="neon-arcade" src="../assets/mascots/cat-neon-arcade.webp" alt="Neon Arcade cat mascot"><img class="preview-mascot" data-mascot-theme="black-white" src="../assets/mascots/wolf-black-white.webp" alt="Black and White wolf mascot"><img class="preview-mascot" data-mascot-theme="crimson-red" src="../assets/mascots/fox-crimson-red.webp" alt="Crimson Red fox mascot"><img class="preview-mascot" data-mascot-theme="cream-coffee" src="../assets/mascots/dog-cream-coffee.webp" alt="Cream Coffee dog mascot"></div>
+      </section>
+      <section class="auth-panel" aria-labelledby="login-title">
+        <h2 id="login-title">Welcome back</h2><p class="panel-intro">Enter one of the public demonstration accounts.</p>
+        <form id="preview-login-form" novalidate>
+          <div class="field"><label for="login-username">Username</label><input id="login-username" name="username" autocomplete="username" placeholder="user or admin" required></div>
+          <div class="field"><label for="login-password">Password</label><div class="password-wrap"><input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Preview password" required><button class="password-toggle" type="button" data-password-toggle="login-password" aria-pressed="false">Show</button></div></div>
+          <button class="primary-action" type="submit">Open preview dashboard</button><p class="form-message" id="login-message" aria-live="polite"></p>
+        </form>
+        <div class="demo-access" aria-label="Preview credentials"><strong>Preview accounts</strong><div class="demo-row"><span>Client</span><span><code>user</code> / <code>user1</code></span></div><div class="demo-row"><span>Administrator</span><span><code>admin</code> / <code>admin1</code></span></div></div>
+        <p class="panel-switch">No preview profile? <a href="signup.html">View sign-up</a></p>
+      </section>
+    </main>
+  </body>
+</html>

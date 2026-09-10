@@ -1,0 +1,37 @@
+# Development files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.sites-runtime/
+.openai/
+
+# Runtime and private data
+.env
+.env.*
+*.db
+*.db-*
+*.sqlite*
+*.log
+data/
+files/
+uploads/
+quarantine/
+backups/
+secrets/
+vault/
+
+# Credentials and keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+authorized_keys
+
+# Build archives
+*.zip
+*.tar
+*.tar.gz
