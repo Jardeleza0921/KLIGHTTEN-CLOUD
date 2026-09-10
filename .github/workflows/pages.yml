@@ -25,15 +25,24 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Configure GitHub Pages
+        id: pages
+        continue-on-error: true
         uses: actions/configure-pages@v5
         with:
-          enablement: true
+          enablement: false
+
+      - name: Skip deploy when Pages is not enabled
+        if: steps.pages.outcome == 'failure'
+        run: |
+          echo "GitHub Pages is not enabled for this repository. Enable Pages in repository settings (Build and deployment: GitHub Actions) to publish."
 
       - name: Upload static Phase 1 site
+        if: steps.pages.outcome == 'success'
         uses: actions/upload-pages-artifact@v3
         with:
           path: PHASE-1/site
 
       - name: Deploy to GitHub Pages
+        if: steps.pages.outcome == 'success'
         id: deployment
         uses: actions/deploy-pages@v4
